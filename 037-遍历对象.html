@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         var obj = {
+            uname: '张三疯',  
+            age:18,
+            sex: '男',
+            sayHi: function() {
+                console.log('hi~');
+            }
+        }
+        //遍历方法 for k（变量）in 对象 语法格式： for(变量 in对象) {}
+        for(var k in obj) {
+            console.log(k); //输出的是属性名
+            console.log(obj[k]); //obj[k]输出的属性值,注意不佳引号，因为k是变量，一般用k或者key;
+
+        }
+    </script>
+</body>
+</html>

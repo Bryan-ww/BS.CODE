@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //函数使用：声明函数，调用函数
+        // 1.声明函数：function 函数名(){
+            //函数体 
+        // }  
+        // function sayHi() {
+        //     console.log('hi~');
+        // }
+        // 2.调用函数。
+        // sayHi()
+        // var sum =0;
+        // function getSum() {
+        //     for (var i= 0; i<=100;i++) {
+        //         sum+=i;
+        //     }
+        //     console.log(sum);
+        // }
+        // getSum();
+        //案例1，求任意两个数的和；
+
+        // function getSum(number1,number2) {
+        //     return number1+number2;
+        // }
+           console.log(getSum())
+        // getSum(2,5);
+        // 案例2：求两个数之间的和；
+        function getSum(start,end) {
+            var sum = 0;
+            for(var i=start; i<= end; i++) {
+                sum+=i;
+            }
+            console.log(sum);
+        }
+        getSum(1,5);
+
+
+    </script>
+</body>
+</html>

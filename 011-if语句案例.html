@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1.判断奇数还是偶数 
+        /* 
+        /%2===0为偶数  0为假
+        %2===1为奇数 1 为真
+        
+        */
+       
+    
+        
+        // var a = 8
+        // if(a%2===0) {
+        //     console.log("偶数")
+        // }
+        // else {
+        //     console.log("奇数")
+        // }
+
+        // var n = 8
+        // if(n%2) {    //if{false} 就不执行 取反！(n%2) 偶数
+        //     console.log("奇数")
+        // } else {
+        //     console.log("偶数")
+        // }
+
+        // var inputScore = 83   //2.不同成绩分数，输出不同的成绩等级
+        // if(inputScore=100) {
+        //     console.log("A")        
+        // } else if(inputScore>=90) {
+        //     console.log("A")        
+        // } else if(inputScore>=80) {
+        //     console.log("B")
+        // } else if(inputScore>=60) {
+        //     console.log("C")
+        // } else if(inputScore<60) {
+        //     console.log("D")
+        // } 
+
+    //3.判断闰年
+    //世纪闰年：可以被400整除，也就是year%400===0 ; 普通闰年：可以被4整除，但不能喝被100整除：year%4===0 &&year%100!=0
+
+     var inputYear = 2004
+        if(inputYear%400===0 || inputYear%4===0 && inputYear%100!=0)  {  // &&的优先级会高于||所以不用单独加()
+            console.log("闰年")
+        } else {
+            console.log("平年")
+        }
+
+    </script>
+</body>
+</html>

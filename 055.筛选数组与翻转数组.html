@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // ***案例：有一个包含工资的数组[1500,1200,2000,2100,1800],要求吧数组中工资超过2000的删除，放入新的数组
+        var arr = [1500,1200,2000,2100,1800];
+        var newArr = []; 
+        for (var i = 0;i<arr.length; i++) {  //遍历数组
+            if(arr[i] <2000) {
+                // newArr[newArr.length]= arr[i];   以往做法
+                newArr.push(arr[i])// 直接添加到新的数组
+            }   
+        }
+        console.log(newArr);
+        // 数组排序
+        //1.翻转数组
+        var arr1 = ['pink','red','blue']
+        arr1.reverse();
+        console.log(arr1);
+        //2.冒泡排序
+        var arr2 = [4,7,3,1]
+        arr2.sort();
+        console.log(arr2);
+        // sort只能对个位数排序，如果是2位数，会比较第一位
+        var arr3 = [14,77,3,11];
+        arr3.sort(function(a,b) {   //a-b 为升序 b-a为降序
+            return a-b;
+        });  //加上函数排序
+        console.log(arr3);
+        // 再写一遍降序
+        var arr4 = [14,77,3,11];
+        arr4.sort(function(a,b) {
+            return b - a ;
+        });
+        console.log(arr4);
+
+    </script>
+</body>
+</html>

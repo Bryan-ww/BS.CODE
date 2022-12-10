@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Date() 日期对象 是一个构造函数，必须要用new 来调用创建我们的日期对象
+        // var arr = new Arr(); /// 创建一个数组对象
+        // var obj = new object();//创建一个对象实例
+        //1.使用Date 没有采参数返回当前时间
+        var date = new Date();
+        console.log(date);
+        // 2.参数常用的写法 数字型 2019，10,01或者字符串型的'2019-10-01 8:8:8' 或者'2019/5/1
+        var date1 = new Date(2019,10,01);
+        console.log(date1); //返回的是11月不是10月
+        // 3格式化日期 年月日
+        var date3 = new Date();
+        console.log(date3.getFullYear()); //返回当前的日期的年 2022
+        console.log(date3.getMonth()+1); //返回的月份校一个月，需要+1 getMonth返回的是0-11月
+        console.log(date3.getDate()); // 返回的是几号
+        console.log(date3.getDay());  //周一返回的是1,周6返回的是6，周日返回的是0
+        // 写一个2022年11月20日 周日
+        var year = date3.getFullYear();
+        var month = date3.getMonth()+1;
+        var dates = date3.getDate();
+        var arr = ['星期日','星期一','星期二','星期三','星期四','星期五','星期六']
+        var day = date3.getDay();
+        console.log('今天是：' + year +'年'+month+'月'+dates+'号 '+arr[day]);
+        //4 格式化日期：时分秒
+        var date4 = new Date();
+        console.log(date4.getHours());
+        console.log(date4.getMinutes());
+        console.log(date4.getSeconds());
+
+
+        //*** 案例，要求封装一个函数返回当前的时分秒 格式08:08：08
+        function getTime() {
+            var date5= new Date();
+            var h= date5.getHours();
+            h= h<10?'0'+h: h;   //使用的三元运算符?：逻辑：如果<10,在前面+0，否则返回原数值
+            var m = date5.getMinutes();
+            m= m<10?'0'+m: m;
+            var s = date5.getSeconds();
+            s= s<10?'0'+s: s;
+            return h+':'+m+':'+s;
+        }
+        console.log(getTime());
+        
+        
+
+
+    </script>
+</body>
+</html>

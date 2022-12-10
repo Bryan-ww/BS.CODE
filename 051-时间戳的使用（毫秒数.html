@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+            //总的毫秒数：从1970年1月1日到现在的总的毫秒数，得到总的毫秒数的方法有2
+    //1.通过vDate.alueOf() getTime()
+    var date = new Date();
+    console.log(date.valueOf());
+    console.log(date.getTime());
+
+    //2.简单的写法（最常用的写法）
+    var date1 = +new Date(); ///+new Date()返回的就是总的毫秒数
+    console.log(date1);
+
+    //3.H5新增的方法Date.now(),最简单 有小括号
+    console.log(Date.now());
+
+
+    //毫秒数永远不会重复的，时间戳
+
+
+    </script>
+    
+</body>
+</html>

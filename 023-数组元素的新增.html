@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1.方法一“修改数组的length
+        var arr = ['red','blue','green'];
+        console.log(arr.length);
+        arr.length = 5; //将数组长度修改为5，数组里有5个元素
+        console.log(arr);
+        console.log(arr[3]); //undefined
+        console.log(arr[4]); //undefined
+
+        //2.方法2:修改数组索引号，追加数组元素
+        var arr1 = ['red','blue','green'];
+        arr1[3]= 'pink';
+        console.log(arr1);
+        arr1[0] = 'yellow'; //会替换原有的数组元素
+        console.log(arr1);
+        //3.案例：新建一个数组，里面存放10个整数，1-10
+        var arr2 = [];
+        for (var i = 0; i< 10;i++) {
+            arr2[i] = i+1;
+        }
+        console.log(arr2);
+        //案例4：将数组中的[2.6,0,51,75,33,8]中大于等于10的元素筛选出来，放入新的数组；
+
+        var arr3=[2.6,0,51,75,33,8];
+        var newArr = [];
+        // var j = 0;
+
+        for (var i=0; i<arr3.length; i++) {
+            if (arr3[i] >= 10) {
+               newArr[newArr.length] = arr3[i];
+            //    j++
+            }
+        }
+        console.log(newArr);
+
+    </script>
+</body>
+</html>

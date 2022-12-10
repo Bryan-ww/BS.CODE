@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 4.3表单元素的属性操作,利用DOM可以操作如表单元素的属性
+     type、value、checked、selected、disabled -->
+     <button>按钮</button>
+     <input type="text" value="输入按钮">
+     <script>
+        // 1.获取元素
+        var btn = document.querySelector('button');
+        var input = document.querySelector('input');
+        // 2.注册事件
+        btn.onclick = function() {
+            input.value ='已输入';
+            // 表单里的值用value来改变
+            // btn.disabled = true;
+            this.disabled = true; //this值函数的调用者
+        }
+     </script>
+</body>
+</html>

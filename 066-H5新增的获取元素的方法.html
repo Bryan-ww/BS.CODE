@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box">盒子</div>
+    <div class="box">小盒子</div>
+    <div id="nav">导航</div>
+    <ul>
+        <li>产品</li>
+        <li>首页</li>
+    </ul>
+    <script>
+        // 1.getElementsByClassName() 根据雷鸣获取某些元素集合
+        var boxs = document.getElementsByClassName('.box');
+        console.log(boxs);
+        // 2.querySelector() 返回指定类选择器的第一个元素对象，请注意是选择器
+        var firstBox = document.querySelector('.box'); //注意前面要加符号 class加.. id加#
+        console.log(firstBox);
+        var nav = document.querySelector('#nav');
+        console.log(nav);
+        var li = document.querySelector('li'); // 这里只能得到li的第一个元素
+        console.log(li);
+
+        // 3. querySelectorAll() 返回指定选择器的所有元素对象集合
+        var lis = document.querySelectorAll('li');  //这里可以得到所有li元素对象的集合
+        console.log(lis);
+
+    </script>
+</body>
+</html>

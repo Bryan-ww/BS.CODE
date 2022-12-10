@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // //基本语法：
+        // switch(要判断的量) {
+        //     case 1 : 要执行的代码
+        //     break;
+        //     case 2 : 要执行的代码
+        // //  break;
+        // default : 
+        //         以上都不满足要执行的代码 ,后面没有break
+        // }
+
+        /* 案例1：
+        订单状态码
+        1 未付款
+        2 已付款
+        3 已发货
+        4 已完成
+        */
+        
+    // var code =  6
+
+    // switch(code) {
+    //     case 1 : 
+    //     document.write("未付款")
+    //     break;
+    //     case 2 : 
+    //     document.write("已付款")
+    //     break;
+    //     case 3 : 
+    //     document.write("已发货")
+    //     break;
+    //     case 4 : 
+    //     document.write("已完成")
+    //     break;
+    //     default:
+    //     document.write("出错了")
+    // }       
+    /* 案例2 满200-10 满100-5 满50-3
+     */
+    // var sum = 56
+    // var youhuiSum
+
+    // switch(true) {     //要判断的量为是否为真
+    //     case sum>=200 : 
+    //       youhuiSum = sum-10
+    //       break;
+    //     case sum>=100 && sum<200 :
+    //       youhuiSum = sum-5
+    //       break;
+    //     case sum>=50 && sum<100 :
+    //       youhuiSum = sum-3
+    //       break;
+    //     default :
+    //       youhuiSum = sum
+    // }
+
+    // console.log(sum,youhuiSum)
+
+    /*案例3:1-12月，每月有多少天
+
+     */
+
+    //  var month = 2
+
+    //  switch(month) {
+    //     case 1 :
+    //     case 3 :
+    //     case 5 :
+    //     case 7 :
+    //     case 8 :
+    //     case 10 :
+    //     case 12 :
+    //         console.log("31天")
+    //         break;
+    //     case 2 :
+    //         console.log("28天")
+    //         break;
+    //     case 4 :
+    //     case 6 :
+    //     case 9 :
+    //     case 11 :
+    //         console.log("30天")
+    //         break;
+        
+    //  }
+
+    //成绩案例改写
+
+    var score = 56
+    var flatScore = parseInt(score/10)
+
+    switch(flatScore) {
+        case 10 :
+        case 9 :
+            console.log("A")
+            case 10 :
+            break;
+        case 8 :
+            console.log("B")
+            break;
+        case 7 :
+            console.log("C")
+            break;
+        case 6 :
+            console.log("D")
+            break;
+        default :
+            console.log("E")
+
+    }
+
+
+
+        
+    </script>
+</body>
+</html>

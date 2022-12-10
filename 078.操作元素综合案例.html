@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .ad {
+            display: inline-block;
+            width: 150px;
+            height: 150px;  
+            background-color: pink;
+        }
+        p {
+            
+            top: -50px;
+            left: -20px;
+            
+
+        }
+    </style>
+
+</head>
+<body>
+    <!-- 1.世纪佳缘用户名隐藏显示内容 -->
+    <!-- <div>
+        <input type="text" class='account' value="用户名"> 
+    </div>
+    <script>
+        var box= document.querySelector('div');
+        var user = document.querySelector('.account');
+        user.onfocus= function() {
+            if(this.value==='用户名') {
+                this.value='';            
+            } 
+        }
+        user.onblur= function() {
+            if(this.value==='') {
+                this.value='用户名';    
+            }
+        } -->
+
+<!-- 
+    </script> -->
+    <!-- 2.京东关闭广告 -->
+    <p>X</p>
+    <div class="ad"> 
+    </div>
+    <script>
+        var close = document.querySelector('p')
+        var ad =document.querySelector('.ad')
+        close.onclick=function() {
+            ad.style.display= 'none';
+        }
+    </script>
+    <!-- 3.微博下拉菜单 -->
+    
+    
+</body>
+</html>

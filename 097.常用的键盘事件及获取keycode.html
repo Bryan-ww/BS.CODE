@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        textarea {
+            width: 200px;
+            height: 200px;
+           
+        }
+    </style>
+</head>
+<body>
+    <script>
+        // // 1.onkeydown :键盘按下的时候触发
+        // document.addEventListener('keydown',function(){
+        //     console.log('按下键盘keydown');
+        // });
+        // // 2.onkeyup:键盘弹起
+        // document.addEventListener('keyup',function(){
+        //     console.log('键盘弹起keyup');
+        // });
+        // // 3.onkeypress:按键按下时触发，与1的区别自安于他不识别功能键，如ctrl shift箭头等，得到的keyCode要区分大小写
+        // document.addEventListener('keydown',function(){
+        //     console.log('按下键盘press');
+        // });
+    // <!-- 键盘事件对象中的keyCode属性可以得到相应键的ASCII码值// 
+    //     1.我们的keyup 和keydown事件不区分字母大小写 a 和 A 得到的都是65// 
+    //     2.我们的keypress 事件 区分字母大小写 a 97 和 A 得到的是65 -->
+        document.addEventListener('keyup',function(e){
+            console.log('up:'+e.keyCode);
+        });
+        document.addEventListener('keypress',function(e){
+            console.log('up:'+e.keyCode);
+        });
+    </script>
+
+</body>
+</html>

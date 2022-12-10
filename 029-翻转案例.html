@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 将数组['red','blue','green','pink'，'purple']翻转过来，使用for循环嵌套,外层趟数，new
+        // 把第4个数 给新数组地0个;
+        // 把第3个数 给新数组地1个;
+        // 把第2个数 给新数组地2个;
+        // 把第1个数 给新数组地3个;
+        // 把第0个数 给新数组地4个;
+        function reverse(arr) {
+            var newArr= [];
+            for (var i=arr.length-1; i>= 0; i--) {
+                newArr[newArr.length] = arr[i];
+            }
+            return newArr;   
+        }
+        var reverse([5,7,20,30])
+        console.log(reverse([5,7,20,30]));
+
+    </script>
+</body>
+</html>

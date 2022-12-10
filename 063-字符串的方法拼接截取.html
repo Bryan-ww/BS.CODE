@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var str = '改革春天吹满地,春天来了';
+        // substr('截取的起止位置'，‘截取几个字符)；
+        console.log(str.substr(2,2)); //从第二个开始，截取2个字符串
+        // 1.替换字符 replace('被替换的字符','被替换为的字符')，它只会替换第一个字符
+        var str = "abcoefoxyzozzopp";
+        while (str.indexOf('o')!==-1) {
+            str = str.replace('o','*')
+        }
+        console.log(str);
+        // 2.字符串转换为数组split('分隔符')
+        var str2 = 'red,pink,blue';
+        console.log(str2.split(','));
+        console.log(str2.split('&'));
+        // 3.toUpperCae() 转换为大写； 如果不是字符串类型会被强制转换未字符串的形式
+        var str3 = 'red,pink,blue';
+        console.log(str3.toUpperCase());
+        //4.toLowercase()转换为小写 不是函数，值.toLowerCase
+        var str4 = ['RED','PINK','BLUE'];
+        console.log('RED'.toLowerCase());//不是函数，只是值得替换
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 捕获阶段或者冒泡阶段 -->
+    <button>传统注册事件</button>
+    <button>方法监听注册事件</button>
+    <script>
+        var btns = document.querySelectorAll('button');
+        btns[1].addEventListener('click', function(){
+            alert(22);
+        });
+
+    </script>
+    <DIV>1</DIV>
+    <DIV>2</DIV>
+    <DIV>3</DIV>
+    <SCRipt>
+        var divs=document.querySelectorAll('Div');
+        // 先注册事件
+        divs[0].addEventListener('click',fn); //里面的fn不需要小括号，直接调用函数
+        function fn() {
+            alert(22);
+            divs[0].removeEventListener('click',fn)
+            // divs[0].onclick=null;传统的删除方式
+            // 再删除事件
+
+        }
+    </SCRipt>
+</body>
+</html>

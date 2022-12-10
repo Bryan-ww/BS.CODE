@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //
+        /* 
+        基本语法：var num = 0   1.初始条件
+        while( num>10)       2.条件判断 while(满足什么条件) {就执行代码}
+        {      3.要执行的代码
+        num = num +1 4. 自身改变 如果自身没有改变就会一直循坏下去
+        }
+        */
+
+        var n = 0
+        while(n<10) {
+            console.log("li", n) //li 为节点，询问0-9 一共10次循坏
+            n++  //自身的变量可以改变：称为步长
+        }
+        var m =1;
+        while(m<=100) {
+            console.log('这个人今年' +m+'岁了');
+            m++
+        }
+        //计算100-200
+        var message = prompt('你爱我吗？')  
+        while (message!=="我爱你") {
+            message = prompt("你爱我吗")
+        }   
+            alert('我也爱你呀');           
+            
+        //基本语法do while do{循坏题} while(条件表达式)
+        var i =1
+        do {
+            console.log("how are you");
+            i++;
+        } while(i<=10)
+
+        
+        
+    </script>
+</body>
+</html>

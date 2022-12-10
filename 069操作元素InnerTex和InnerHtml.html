@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>显示当前时间</button>
+    <div>某个时间</div>
+    <script>
+        //需求：当我们点击按钮，div的文字发生变化
+        //1.获取事件源
+        var btn = document.querySelector('button');
+        var div = document.querySelector('div');
+        // 2.注册事件
+        btn.onclick = function() {    //3.添加事件处理陈旭
+            div.innerText = '2022-11-29 4:06';
+        }
+        //
+    </script>
+</body>
+</html>

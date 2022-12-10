@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // concat() 链接2个或者多个数值，不会影响原数组，返回一个新的数组
+
+    var num1= [1,2,3];
+    var num2 = [4,5,6];
+    var num3 = num1.concat(num2)
+    console.log(num3);
+
+    // slice(begin,end) 数组截取,从begin开始，end结束，end不会被包含，返回被截取项目的新数组
+    var b1=['red','pink','blue','yellow','green','orange','purple'];
+    var b2= b1.slice(1,6,)
+    console.log(b2);
+    console.log(b1);
+
+    // splice(begin,要删除的元素个数,要添加的元素)，返回呗删除的一个新数组，这个会影响原数组
+
+    var b3 = ['red','pink','blue','yellow','green','orange','purple'];
+    var b4 = b1.splice(2,3,'black');
+    console.log(b4);
+    console.log(b3);
+
+    </script> 
+</body>
+</html>

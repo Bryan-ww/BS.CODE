@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        str = ''
+        for ( var i=1; i<=9; i++) {
+            for (j = 1; j<=i; j++) {
+            //1x2=2
+               str+= j+"x"+i+"="+i*j+"\t"; //字符串的拼接，\t空格
+            }
+            str+="\n" //\换行              
+        }
+        console.log(str);
+    </script>
+</body>
+</html>

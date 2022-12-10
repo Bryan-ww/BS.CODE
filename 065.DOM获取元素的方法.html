@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="time">2022-11-28</div>
+    <script>
+        // 获取元素方法1：getElementById('time')    //参数是大小写敏感的字符串
+        var timer = document.getElementById('time');
+        console.dir(timer); //dir是用来打印元素的对象的,里面有属性和方法
+    </script>
+    <ul>
+        <li>今天可以哟</li>
+        <li>昨天可以哟</li>
+        <li>明天可以哟</li>
+    </ul>
+    <ol>
+        <li>生僻字</li>
+        <li>生僻字</li>
+        <li>生僻字</li>
+    </ol>
+    <script>
+        //获取元素方法2：getElementsByTagName()； /括号里接标签名
+        var lis = document.getElementsByTagName('li'); //得到的是一个集合对象，以伪数组的形式粗存,elements是复数，
+        console.log(lis); //如果页面只有一个Li或者没有，返回的都是伪数组
+        for(var i=0;i<lis.length;i++) {
+            console.log(lis[i]);
+        }
+        // element.getElementsByTagName()；
+        var ol = document.getElementsByTagName('ol');  // 利用父元素获取li
+        console.log(ol[0].getElementsByTagName('li'));  //需要指明具体的父元素
+    </script>
+</body>
+</html>

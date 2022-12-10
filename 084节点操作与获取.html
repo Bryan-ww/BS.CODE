@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box">
+        <span class="demo"></span>
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <ol>
+            <li>11</li>
+            <li>22</li>
+            <li>33</li>
+        </ol>
+    </div>
+    <script>
+        //1.父节点 parentNode
+        var demo=document.querySelector('.demo');
+        //得到的是离元素最经的父级节点
+        console.dir(demo.parentNode);
+        // 2.子节点 childNodes获取子节点包含元素文本节点等等
+        var lis =document.querySelectorAll('li')
+        console.log(ul.childNodes);
+        // children获得的是子元素节点，也是实际开发常用的
+        console.log(ul.children);
+        var ol =document.querySelector('ol')
+        console.log(ol.firstChild);
+        console.log(ol.lastChild);
+        // 3.实际开放中常用children[]
+        console.log(ol.children[0]);  //这是第一个
+        console.log(ol.children[ol.children.length-1]);
+        // 4.兄弟节点 node.nextsibling
+        console.log(span.nextSibling);
+        console.log(ul.previousSibling);
+
+
+
+    </script>
+</body>
+</html>

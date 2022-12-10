@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 倒计时 基本思路：输入的时间减去现在的时间毫秒数，就是剩下的毫秒数
+        //用时间戳来做，用户输入的毫秒数减去现在的总毫秒数，得到的就是剩下的毫秒数
+        // 将剩余的毫秒数转换为天 ，时，分，秒，毫秒数/1000=秒数
+        //毫秒数转换公式如下：
+        // d = parseInt(总秒数/60/60/24); //计算天数秒/60>分/60>时u/24>天；
+        // h = parseInt(总秒数/60/60%24); 计算小时
+        // m= parseInt(总秒数/60%60);计算分数
+        // s= parseInt(总秒数%60);计算秒数
+
+        // 封装倒计时函数
+        // function countDown (time) {
+        //     var nowTime= +new Date();  //返回的是当前总的毫秒数
+        //     var inputTime = +new Date(time);  //返回的是用户输入的总毫秒数
+        //     var restTime=(inputTime-nowTime)/1000;
+        //     var d = parseInt(restTime / 60 / 60 / 24); 
+        //     d = d<10? '0'+d:d;
+        //     var h = parseInt(restTime / 60 / 60 % 24);
+        //     h = h<10? '0'+h:h;
+        //     var m = parseInt(restTime / 60 % 60);
+        //     m = m<10? '0'+m:m;
+        //     var s = parseInt(restTime % 60);
+        //     s = s<10? '0'+s:s;
+        //     return d+'天'+ h +'时'+ m +'分'+s+'秒';
+        // } 
+        // console.log(countDown('2022-11-22 09:00:00'));
+        // var date= new Date();
+        // console.log(date);
+
+        function countDown(time) {
+            var nowTime = +new Date(); // 当前的总的毫秒数
+            var inputTime = +new Date(time); //用户输入的时间的总毫秒数
+            var timer = (inputTime-nowTime) / 1000;
+            var d = parseInt(timer/60/60/24);
+            d = d < 10? '0'+ d : d;
+            var h = parseInt(timer /60 /60 % 24);
+            h = h < 10? '0'+ h: h;
+            var m = parseInt(timer /60 % 60);
+            m= m < 10? '0'+ m : m ;
+            var s = parseInt(timer % 60);
+            s = s < 10? '0'+s: s;
+            return d + '天'+ h +'时'+ m +'分'+s+'秒';
+        }
+        console.log(countDown('2022-11-22 11:00:00'));
+        var date = new Date(); //得到的是现在的时间
+        console.log(date);
+
+        //再写一遍
+        function countDown(tim) {
+            var nowTime = +new Date();
+            var inputTime = +new Date(tim);
+            var ctime = (inputTime-nowTime) / 1000; // 这里注意先做减法，加小括号
+            var d = parseInt(ctime / 60 / 60 / 24);
+            d = d < 10? '0'+d : d;
+            var h = parseInt(ctime /60 /60 % 24);
+            h = h < 10? '0'+h : h; 
+            var m = parseInt(ctime /60 % 60);
+            m = m < 10? '0'+ m : m;
+            var s = parseInt(ctime%60);
+            s = s < 10? '0'+s : s;
+            return d +'天' + h +'时' + m +'分'+ s +'秒';
+        }
+        console.log(countDown('2022-11-22 11:00:00'));
+        var date1 = new Date();
+        console.log(date1);
+
+
+        
+
+
+
+    </script>
+</body>
+</html>

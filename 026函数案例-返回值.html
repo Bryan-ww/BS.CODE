@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // //利用函数求数组[5,2,99,101,67,77]中的最大值
+        // function getMax(arr) {
+        //     var max = 0;
+        //     for (var i =0; i<=arr.length; i++) {
+        //         if (arr[i]>max) {
+        //             max = arr[i];
+        //         }
+        //     }
+        //     return max; //return后面的代码不会执行，终止函数
+        // }
+        // getMax([5,2,99,101,67,77]);
+        // console.log(getMax([5,2,99,101,67,77]));
+        // var re = getMax([2,18,55,301,77]); // 可以用变量来接受函数的返回结果
+        // console.log(re);
+
+        function getResult(num1,num2) {
+            return [num1 + num2, num1 - num2, num1*num2,num1 / num2]; //没有return，返回的是undefined
+        }
+        var re =getResult(1,2);
+        console.log(re);
+    </script>
+</body>
+</html>

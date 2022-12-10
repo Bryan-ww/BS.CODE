@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Math.random() 函数返回一个浮点数，伪随机数在范围从0 到小于1，也就是说，从 0（包括 0）往上，但是不包括 1（排除 1），然后您可以缩放到所需的范围。实现将初始种子选择到随机数生成算法;它不能被用户选择或重置。0<=随机数<1
+        Math.random(); //不跟参数
+        console.log(Math.random);
+        // 案例1：想要得到两个数之间的随机整数，并且包含这2个整数
+        function getRandom(min,max) {
+            return Math.floor(Math.random() * (max-min+1))+min; //公式需要记住
+        }
+        console.log(getRandom(1,10));
+        // 案例2：随机点名
+        var arr= ['张三','李四','王五'] 
+        console.log(arr[getRandom(0,arr.length-1)]);
+        //案例：猜数字游戏；
+        function getRandom(min,max) {
+            return Math.floor(Math.random() * (max-min+1))+min; //公式需要记住
+        }
+        var random=getRandom(1,10);
+        while(true) { //死循坏
+            var num= prompt('你来猜,输入1-10的数字'); 
+            if(num>random) {
+                alert('你猜大了')
+            } else if (num<random) {
+                alert  ('你猜小了')          
+            } else{
+                alert('你好帅哟，猜对了')
+                break; //结束循坏
+            }
+        }
+    </script>
+</body>
+</html>

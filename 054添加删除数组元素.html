@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /// 1.push() 在数组的末尾添加一个或者多个元素
+        var arr = [1,2,3];
+        // arr.push(4,'pink'); // push()参数直接写需要添加的元素的就行
+        console.log(arr.push(4,'pink'));  //返回的是数组的长度，
+        console.log(arr); 
+        // 2. unshift() 在数组的开头添加一个或者多个元素
+        // arr.unshift('red',2);
+       
+        console.log(arr.unshift('red',2));
+        console.log(arr);
+        //3.pop() 不跟参数，删除最后一个元素，返回的是删除的元素；一次只能删除一个元素
+        var arr1= [1,3,4,'pink']
+        // arr1.pop();
+        console.log(arr1);
+        console.log(arr1.pop()); // 返回的是删除的元素
+        //.shift() 可以删除数组第一个元素
+        arr1.shift();
+        console.log(arr1);
+        // console.log(arr1.shift());
+        
+    </script>
+</body>
+</html> 

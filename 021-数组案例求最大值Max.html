@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 1.求数组中[2,77,8,20,52,0]的最大值；
+        1）声明保存最大值的变量Max；
+        2）默认数组中第一个元素为最大值；
+        3）遍历这个数组，吧每一个元素和max对比；
+        4）如果数组元素大于max,就将这个数组元素存档max里面，然后进行下一步比较；
+        5）最后输出这个max;
+         */
+        var arr = [2,77,8,20,52,60];
+        var max= arr[0];
+        for (var i = 0; i<arr.length; i++) {  //这一步数先访问所有数据要做的循坏
+            if (arr[i]>max) {
+               max=arr[i];
+            }
+        }
+        console.log(max);
+    </script>
+</body>
+</html>
