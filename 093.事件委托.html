@@ -19,7 +19,16 @@
         ul.addEventListener('click',function(e) {
             // alert('弹出每个 li');
             e.target.style.backgroundColor='pink';
+            console.log(e.target);
+            console.log(e.currentTarget);// current始终指向绑定事件的元素
         });
+        ul.addEventListener('click',()=> {   
+            // e.target.style.backgroundColor='pink';
+            // console.log(e.target);
+            console.log(this);
+        })
+        console.log(this);
+
     </script>
 </body>
 </html>
