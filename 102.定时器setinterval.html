@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    div {
+        position: relative;
+        width: 100px;
+        height: 100px;
+        background-color: aqua;
+
+    }
+
+    </style>
+
+</head>
+<body>
+    <div></div>
+    <button class="start">开始</button>
+    <button class="end">结束</button>
+    <script>
+        let start = document.querySelector('.start');
+        let div =document.querySelector('div');
+        let timer='';
+        start.addEventListener('click',()=>{
+            let dis=0;
+            timer= setInterval(()=>{
+                dis+=100;
+                div.style.left=dis+'px';
+            },1000); 
+        })
+        let end = document.querySelector('.end');
+        end.addEventListener('click',()=> {
+            clearInterval(timer);
+        })
+    </script>
+</body>
+</html>

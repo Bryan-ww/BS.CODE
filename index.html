@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div></div>
+    <script>
+        let div = document.querySelector('div');
+        let params= location.search;
+        console.log(params.substr(1,));
+        let ue= (params.substr(1,));
+        let arr= ue.split('&')[1].substr(5);
+        div.innerHTML=`${arr}欢迎你`;
+
+
+
+
+
+        
+        let ne=['agent=18','uname=gakki']
+         for(let i=0;i<ne.length;i++) {
+            let arr=ne[i].split('=');
+            if(arr[0]==='uname') {
+                console.log(arr[1]);
+            }
+         }
+    </script>
+</body>
+</html>

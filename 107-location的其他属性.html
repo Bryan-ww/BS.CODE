@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 5.4location 对象的方法
+location对象方法
+location.assign() 返回值跟 href 一样，可以跳转页面 (也称为重定向页面)
+ocation.replace() 替换当前页面，因为不记录历史，所以不能后退页面
+location.reload()60 重新加载页面，相当于刷新按钮或者 f5 如果参数为true 强制刷新 ctrl+f5-->
+<button>点击</button>
+<script>
+    let btn=  document.querySelector('button');
+    btn.addEventListener('click',()=> {
+        // location.assign('https://www.baidu.com/');
+        // location.replace('https://www.baidu.com/');
+        // location.reload('https://www.baidu.com/') ; //如果（true）则相当于强制刷新
+        location.reload(true) ;
+
+
+    })
+    </script>
+
+
+
+
+</body>
+</html>

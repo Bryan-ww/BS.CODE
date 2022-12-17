@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <input type="text">
+    <button>发送</button>
+    <script>
+        let btns= document.querySelector('button');
+        // let sec=10;
+        // btns.addEventListener('click',()=>{
+        //     if(sec===10) {
+        //         let timer=setInterval(()=>{
+        //             sec--
+        //             btns.innerHTML='还剩'+sec+'秒结束';
+        //             if(sec===0) {
+        //                 clearInterval(timer);
+        //                 btns.innerHTML='发送';
+        //                 sec=10;
+        //             }
+        //         },1000); 
+        //     }
+        // });
+        let sec=0;
+        btns.addEventListener('click',()=>{
+            if(sec===0) {
+                sec=10
+                let timer=setInterval(()=>{
+                    sec--
+                    // btns.innerHTML='还剩'+sec+'秒结束';
+                    btns.innerHTML= `${sec}秒结束` //模板字符串
+                    if(sec===0) {
+                        clearInterval(timer);
+                        btns.innerHTML='发送';
+                    }
+                },1000)
+            }     
+        })
+      
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            text-decoration: none;
+            padding: 0;
+            margin: 0;
+        }
+        .touch {
+            height:50px;
+            font-size: large;
+            text-align: center;
+
+        }
+        .touch .skip {
+            color: black;
+        }
+        .login {
+            /* display: none; */
+            top: 50%;
+            left: 50%;  
+            width: 400px;
+            height: 200px;
+            background-color: #fff;
+            position: fixed;
+            box-shadow: 0px 0px 20px #ddd;
+            z-index: 999;
+        }
+        .tittle {
+            position: relative;
+            height: 40px;
+            line-height: 40px;
+            font-size: larger;
+            text-align: center;
+        }
+        .close {
+            width: 40px;
+            height: 40px;
+            background-color: pink;
+
+        }
+        /* .close {
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 1px solid grey;
+            font-size: 16px;
+            line-height: 40px;
+            color: black;
+
+        } */
+        .username {
+            line-height: 40px;
+
+        }
+        .password {
+            line-height: 40px;
+
+        }
+        button {
+            line-height: 40px;
+            border: none;
+            text-align: center;
+            width: 400px;
+            background-color: #fff;
+        }
+        .bg {
+            display: none;
+            background-color: rgba(0, 0, 0, .3);
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0px;
+            left: 0px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="touch"><a href="javaScript:;" class="skip">点击，弹出登录框</a></div>
+    <div class="login">
+        <div class="tittle" >登录会员
+            <a href="javaScript:;" class="close" id="link">关闭</a>
+        </div>
+        <div class="username">
+            <label for="user">用户名：
+                <input type="text" id="user">
+            </label>
+        </div>
+        <div class="password">
+            <label for="pw">登录密码：
+                <input type="text" id="pw">
+            </label>
+        </div>
+        <button>登录会员</button>
+    </div>
+    <div class="bg"></div>
+    <script>
+        let touch = document.querySelector('.touch');
+        let lg= document.querySelector('.login');
+        let bg = document.querySelector('.bg');
+        touch.addEventListener('click',()=>{
+            lg.style.display ='block';
+            bg.style.display ='block';
+        });
+        let tittle = document.querySelector('.tittle');
+        let close =document.querySelector('.close');
+        close.addEventListener('click',()=>{
+            lg.style.display ='none';
+            bg.style.display ='none';
+        });
+        // 当鼠标在tittle区域按下时得到鼠标在盒子内的坐标
+        tittle.addEventListener('mousedown',(e)=> {
+            let X =e.pageX-lg.offsetLeft;
+            let Y =e.pageY-lg.offsetTop;
+            // 得到鼠标在页面中移动的坐标，从而得到盒子相对于页面的topleft值
+            document.addEventListener('mousemove',move)
+            function move(e) {
+                lg.style.left=e.pageX-X +'px';
+                lg.style.top= e.pageY-Y+'px';
+            }
+            // 鼠标弹起，移除移动事件
+            document.addEventListener('mouseup',()=>{
+                document.removeEventListener('mousemove',move);
+            })
+            
+        }); 
+
+       
+
+    </script>
+
+</body>
+</html>

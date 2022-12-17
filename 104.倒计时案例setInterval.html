@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            margin: 100px auto;
+            display: flex;
+
+        }
+        span {
+            background-color: red;
+            color: black;
+            width: 60px;
+            height: 50px;
+            border: 1px solid #000;
+            text-align: center;
+            display: flex;
+            /* align-items: center;   */
+            /*  */
+            justify-content: center;
+            flex-direction: column;
+
+            
+        }
+
+     
+
+    </style>
+
+</head>
+<body>
+    <div>
+        <span class="hours"></span>
+        <span class="mins"></span>
+        <span class="seconds"></span>
+    </div>
+    <script>
+        let hours = document.querySelector('.hours');
+        let mins = document.querySelector('.mins');
+        let seconds = document.querySelector('.seconds');
+        var inputTime = +new Date('2022-12-10 23:00:00');  //返回的是用户输入的总毫秒数
+        setInterval(countDown,1000);
+        function countDown (time) {
+            var nowTime= +new Date();  //返回的是当前总的毫秒数
+            var restTime=(inputTime-nowTime)/1000;
+            var h = parseInt(restTime / 60 / 60);
+            h = h<10? '0'+h:h;
+            hours.innerHTML=h;
+            var m = parseInt(restTime / 60 % 60);
+            m = m<10? '0'+m:m;
+            mins.innerHTML=m;
+            var s = parseInt(restTime % 60);
+            s = s<10? '0'+s:s;
+            seconds.innerHTML=s;
+        }  
+          
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+
+    <img src="./图片/FJ2A0680.jpg" alt="">
+    <button>清除</button>
+    <script>
+        // window.setTimeout(调用函数，延迟时间),可省略 clearTimeout
+        // window.setInterval(调用函数，间隔时间) clearInterval
+        let sed= setTimeout(fn,5000)
+        // clearTimeout() 
+        function fn (){
+            let img = document.querySelector('img');
+            img.style.display='none';
+            
+        }
+        let btn =document.querySelector('button');
+        btn.addEventListener('click',()=>{
+            clearTimeout(sed);
+        })
+    </script>
+</body>
+</html>
