@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 300px;
+            height: 300px;
+            background-color: pink;
+            position: absolute;
+        }
+        div:nth-child(2) {
+            position: absolute;
+            top: 400px;
+            width: 300px;
+            height: 300px;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div>我是谁</div>
+    <div class="second">你是谁</div>
+    <script>
+        let div= document.querySelector('div');
+        let second=document.querySelector('.second')
+        let animate =(obj,target)=>{
+            clearInterval(obj.timer)
+            obj.timer=setInterval(()=>{
+                let step= Math.ceil((target- obj.offsetLeft)/10);
+                step= step>0? Math.ceil(step) : Math.floor(step);
+                if(obj.offsetLeft==target) {
+                    clearInterval(obj.timer);
+                    if(callback){
+                // 调用
+                    callback();
+                }
+                }
+                obj.style.left = obj.offsetLeft+step+'px';
+            },15)
+        }
+        animate(div,200);
+        animate(second,800)
+        animate(span,800,function(){})
+        // 匀速动画：盒子当前的位置+固定的值
+        // 快速动画:h盒子当前的位置+变量值（步长：（目标值-现在的位置）/10)
+    </script>
+</body>
+</html>

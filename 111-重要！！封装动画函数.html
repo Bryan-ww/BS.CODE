@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 300px;
+            height: 300px;
+            background-color: pink;
+            position: absolute;
+        }
+        div:nth-child(2) {
+            position: absolute;
+            top: 400px;
+            width: 300px;
+            height: 300px;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div>我是谁</div>
+    <div>你是谁</div>
+    <script>
+        let div= document.querySelector('div')
+        // 封装的函数
+        let animation= (obj,distance)=>{
+            clearInterval(obj.timer)
+            obj.timer=setInterval(()=> {
+            // if(div.style.offsetLeft>100) {
+            //     clearInterval(timer);
+            // }
+                if(parseFloat(obj.style.left)>distance) {
+                    clearInterval(obj.timer);
+                }
+                    obj.style.left=obj.offsetLeft+1+'px';
+                },50);
+        }
+        // 调用函数
+        animation(div,100);
+
+    </script>
+</body>
+</html>

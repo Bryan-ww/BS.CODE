@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* .left {
+            float: left;
+            width: 700px;
+            height: 700px;
+            border: 1px solid #000;
+        } */
+        #sm {
+            vertical-align: middle;
+        }
+        .box {
+            position: relative;
+            float: left;
+            width: 500px;
+            height: 500px;
+            border: 1px solid red;
+            display: flex;
+            justify-content:center;
+            align-items: center;
+            
+        }
+        /* #pic {
+            position: absolute;
+            left: 20px; */
+        /* } */
+        .mask  {
+            display: none;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 300px;
+            height: 300px;
+            background-color: yellow;
+            opacity: .5;
+            z-index: 999;
+            cursor: move;
+        }
+        .big {
+            position: relative;
+            display: none;
+            float: left;
+            width: 700px;
+            height: 700px;
+            border: 1px solid #000;
+            overflow: hidden;
+        }
+        #pic {
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+            <img src="./图片/small.jpg" alt="" id="sm">
+            <div class="mask"></div>
+    </div>
+    <div class="big"><img src="./图片/FJ2A0680.jpg" alt="" id="pic"></div>
+    <script>
+        // 鼠标经过mouseover
+        let box=document.querySelector('.box')
+        let mask=document.querySelector('.mask')
+        let big = document.querySelector('.big')
+        let pic=document.querySelector('#pic')
+        box.addEventListener('mouseover', ()=>{
+            mask.style.display='block';
+            big.style.display='block';
+        })
+        box.addEventListener('mouseout', ()=>{
+            mask.style.display='none';
+            big.style.display='none';
+        })
+        box.addEventListener('mousemove',function(e) {
+            let X=e.pageX-this.offsetLeft;
+            let Y=e.pageY-this.offsetTop;
+            let maxX=box.offsetWidth - mask.offsetWidth;
+            let maxY=box.offsetHeight - mask.offsetHeight;
+            let BmaxX=pic.offsetWidth- big.offsetWidth;
+            let BmaxY=pic.offsetHeight - big.offsetHeight;
+            let left= X-mask.offsetWidth*0.5;
+            let top= Y-mask.offsetHeight*0.5;
+
+            mask.style.left= (left<0? 0: left>maxX?maxX:left)+'px';
+            mask.style.top= (top<0? 0: top>maxY?maxY:top)+'px';
+            let Picleft=left*BmaxX / maxX;
+            let Pictop=top*BmaxY /maxY;
+
+            pic.style.left= -Picleft+'px';
+            pic.style.top= -Pictop+'px';
+        }); 
+    </script>
+</body>
+</html>

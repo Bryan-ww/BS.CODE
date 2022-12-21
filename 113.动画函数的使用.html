@@ -1,0 +1,73 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .box {
+            position: relative;
+            float: right;
+            margin-top:  500px;
+            width: 200px;
+            height: 50px;
+    
+        }
+        span {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: block;
+            color: #fff;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            background-color: blueviolet;
+        }
+        .slider {
+            position: absolute;
+            top: 0;
+            left: 50px;
+            width: 100px;
+            height: 50px;
+            background-color: blue;
+            color: #fff;
+            line-height: 50px;
+
+        }
+
+    </style>
+    <script src="112.Animation.js"></script>
+ </head>
+ <body>
+    <div class="box">
+        <span>←</span>  
+        <div class="slider">问题反馈</div>
+    </div>
+    <script>
+        let box= document.querySelector('.box');
+        let span= document.querySelector('span');
+        let slider= document.querySelector('.slider')
+        box.addEventListener('mouseenter',function (){
+            animate(slider,-109,()=>{
+                box.children[0].innerHTML='→';
+            })
+        })    
+        box.addEventListener('mouseleave',function() {
+                animate(slider,0,()=>{
+                box.children[0].innerHTML='←';
+            })
+
+
+        })
+
+    
+    </script>
+
+ </body>
+ </html>

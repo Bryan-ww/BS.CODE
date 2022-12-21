@@ -123,6 +123,10 @@
             let Y =e.pageY-lg.offsetTop;
             // 得到鼠标在页面中移动的坐标，从而得到盒子相对于页面的topleft值
             document.addEventListener('mousemove',move)
+            // let move=(e)=> {
+            //     lg.style.left=e.pageX-X +'px';
+            //     lg.style.top= e.pageY-Y+'px';
+            // }
             function move(e) {
                 lg.style.left=e.pageX-X +'px';
                 lg.style.top= e.pageY-Y+'px';
@@ -131,7 +135,7 @@
             document.addEventListener('mouseup',()=>{
                 document.removeEventListener('mousemove',move);
             })
-            
+            // 数控技术
         }); 
 
        
